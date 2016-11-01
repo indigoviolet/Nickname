@@ -8,7 +8,7 @@ namespace :nicknames do
     puts "Truncating nicknames table"
     Nickname.delete_all
 
-    puts "Downloading nicknames CSV file from http://code.google.com/p/nickname-and-diminutive-names-lookup/"
+    puts "Downloading nicknames CSV file from raw.githubusercontent.com/carltonnorthern/nickname-and-diminutive-names-lookup"
     file = Net::HTTP.get 'raw.githubusercontent.com/carltonnorthern/nickname-and-diminutive-names-lookup', '/master/names.csv'
     puts "Done"
 
