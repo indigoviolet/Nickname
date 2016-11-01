@@ -9,7 +9,7 @@ namespace :nicknames do
     Nickname.delete_all
 
     puts "Downloading nicknames CSV file from http://code.google.com/p/nickname-and-diminutive-names-lookup/"
-    file = Net::HTTP.get 'nickname-and-diminutive-names-lookup.googlecode.com', '/files/names1.1.csv'
+    file = Net::HTTP.get 'raw.githubusercontent.com/carltonnorthern/nickname-and-diminutive-names-lookup', '/master/names.csv'
     puts "Done"
 
     puts "Parsing file"
